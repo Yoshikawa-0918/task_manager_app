@@ -15,45 +15,10 @@
 
   <script>
       let ncmb = new NCMB(appKey, clientKey);
-
-    // Page init event
-    document.addEventListener('init', function(event) {
-      var page = event.target;
-
-      if (page.matches('#auth_page')) {
-          //#auth_page内の処理をココに書く
-
-        page.querySelector('#auth_button').onclick = function() {
-          document.querySelector('#navigator').pushPage('page2.html');
-        };
-
-      }
-    });
   </script>
 </head>
 <body>
   <ons-navigator id="navigator" page="auth_page.html"></ons-navigator>
-
-  <template id="auth_page.html">
-    <ons-page id="auth_page">
-      <ons-toolbar>
-        <div class="center">新規登録/ログイン</div>
-      </ons-toolbar>
-
-      <div class="content" style="text-align: center; margin-top: 50%;">
-        <p>
-            <ons-input  modifier="underbar" placeholder="ユーザー名"></ons-input>
-        </p>
-        <p style="margin-top: 20px;"></p>
-        <p>
-            <ons-input  modifier="underbar" placeholder="パスワード"></ons-input>
-        </p>
-        <p style="margin-top: 20px;">
-            <ons-button id="auth_button">登録/ログイン</ons-button>
-        </p>
-      </div>
-    </ons-page>
-  </template>
 
 </body>
 </html>
